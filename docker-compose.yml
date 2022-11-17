@@ -1,0 +1,16 @@
+version: '3'
+services:
+  server:
+    image: mageai/mageai:latest
+    build:
+      context: .
+    command: mage start default_repo
+    environment:
+      - ENV=dev
+    ports:
+      - 6789:6789
+    volumes:
+      - .:/home/src
+    restart: on-failure:5
+    stdin_open: true # used for interactive debugging
+    tty: true # used for interactive debugging
