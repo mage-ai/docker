@@ -2,7 +2,7 @@ FROM mageai/mageai:latest
 
 # Replace default_repo with the name of your project (e.g. demo_project)
 ARG PROJECT_NAME=default_repo
-ARG MAGE_CODE_PATH=/home/src
+ARG MAGE_CODE_PATH=/home/mage_data
 ARG USER_CODE_PATH=${MAGE_CODE_PATH}/${PROJECT_NAME}
 
 # Set the MAGE_CODE_PATH variable to the path of the Mage code.
